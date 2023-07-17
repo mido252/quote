@@ -1,0 +1,135 @@
+body{
+    background-color:#e0e0e0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+  }
+
+  h1{
+    font-size:3.5rem;
+  }
+
+  .container{
+    border-radius:14px;
+    padding:10px;
+    margin: 50px;
+    width:fit-content;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-align:center;
+    position: relative;
+  }
+  .container::after{
+    content: "";
+    position: absolute;
+    border-top:5px solid rgba(0, 0, 0, 0.283);
+    width:350px;
+    right:-15px;
+    top:-10px;
+    height: 200px;
+  }
+
+  .container::before{
+    content: "";
+    position: absolute;
+    border-bottom:5px solid rgba(0, 0, 0, 0.283);
+    width:350px;
+    left:-10px;
+    bottom:-10px;
+    height: 200px;
+  }
+  .quote-box{
+    background-color:#7CB0EB;
+    color:black;
+    
+    border-radius: 50px;
+    
+    box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
+    font-size:20px;
+    width:400px;
+    height: 150px;
+    border-radius:10px;
+    padding:10px;
+    position: relative;
+
+  }
+  .quote-box p{ 
+    color:rgba(0, 0, 0, 0.753);
+  }
+  .quote-box::before{
+    content: "";
+    position: absolute;
+    border-right:5px solid rgba(0, 0, 0, 0.283);
+    width:5px;
+    right:-25px;
+    top:-16px;
+    height: 150px;
+  }
+  .quote-box::after{
+    content: "";
+    position: absolute;
+    border-right:5px solid rgba(0, 0, 0, 0.283);
+    width:5px;
+    left:-25px;
+    bottom:-16px;
+    height: 150px;
+  }
+  
+  .quote-box .fa-quote-left{
+    position: absolute;
+    top:-20px;
+    left:20px;
+    font-size:40px;
+  }
+  .quote-box .fa-quote-right{
+    position: absolute;
+    bottom:-20px;
+    right:20px;
+    font-size:40px;
+  }
+  
+  .button {
+    margin-top:40px;
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background:  #0071e2;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    outline:none;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      #7CB0EB 10.8%,
+      #0071e2 94.3%
+    );
+    transition: all 0.475s;
+  } 
+  /* === removing default button style ===*/
+
